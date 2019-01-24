@@ -2,7 +2,7 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Star Wars RPG</title>
+	<title>Trivia Game</title>
 	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,46 +11,16 @@
 </head>
 <body>
 	<header>
+		<h1>How Much Do You Remember</h1>
 	</header>
 	<section >
-		<div id="team01" class="players">
-			<p>Team 1</p>
-			<img src="./assets/images/luke.png">
-			<img src="./assets/images/leia.png">
-			<img src="./assets/images/han solo.png">
-		</div>
-		<div id="team02" class="players">
-			<p>Team 2</p>
-			<img src="./assets/images/bobba fett.png">
-			<img src="./assets/images/storm trooper.png">
-			<img src="./assets/images/dart vader.png">
-		</div>
-	</section>
-	<h2 id="message">...</h2>
-	<section class="game-area">
-		<div class="defender-team">
-			<ul id="sortable">
-			</ul>
-		</div>
-		
-		<div class="defender-team-player">
-			<p id="defenderStats" class="stats"></p>
-			<img id="defenderPlayer" src="">
-			<button id="attack" class="button-attack">Attack</button>
-		</div>
-		<div class="opponent-team">
-			<ul id="sortable2">
-			</ul>
-		</div>
-		<div class="opponent-team-player">
-			<p id="opponentStats" class="stats"></p>
-			<img id="opponentPlayer" src="">
-		</div>
-	</section>
+		<h1><div id="timer"></div></h1>
+		<div id="question">...</div>
 
-	<destion id="defeatedPlayers">
-		<div id="team01" class="players"></div>
-		<div id="team02" class="players"></div>
+		<article id="answer-box">
+			
+		</article>
+		
 	</section>
 </body>
 </html>
