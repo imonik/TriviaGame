@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Star Wars RPG</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="./assets/javascript/game.js"></script>
+</head>
+<body>
+	<header>
+	</header>
+	<section >
+		<div id="team01" class="players">
+			<p>Team 1</p>
+			<img src="./assets/images/luke.png">
+			<img src="./assets/images/leia.png">
+			<img src="./assets/images/han solo.png">
+		</div>
+		<div id="team02" class="players">
+			<p>Team 2</p>
+			<img src="./assets/images/bobba fett.png">
+			<img src="./assets/images/storm trooper.png">
+			<img src="./assets/images/dart vader.png">
+		</div>
+	</section>
+	<h2 id="message">...</h2>
+	<section class="game-area">
+		<div class="defender-team">
+			<ul id="sortable">
+			</ul>
+		</div>
+		
+		<div class="defender-team-player">
+			<p id="defenderStats" class="stats"></p>
+			<img id="defenderPlayer" src="">
+			<button id="attack" class="button-attack">Attack</button>
+		</div>
+		<div class="opponent-team">
+			<ul id="sortable2">
+			</ul>
+		</div>
+		<div class="opponent-team-player">
+			<p id="opponentStats" class="stats"></p>
+			<img id="opponentPlayer" src="">
+		</div>
+	</section>
+
+	<destion id="defeatedPlayers">
+		<div id="team01" class="players"></div>
+		<div id="team02" class="players"></div>
+	</section>
+</body>
+</html>
