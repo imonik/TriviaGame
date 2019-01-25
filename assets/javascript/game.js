@@ -27,7 +27,7 @@ $(document).ready(function(){
   
 
   function setUpQuestion(number) {
-
+     
     resetAll();
     if(number > 3){
       clearInterval(timer);
@@ -54,18 +54,21 @@ $(document).ready(function(){
        }
      $("#answer-box").append($div);
     }
-
-     
+ console.log("on setup current question " + _questionCounter);
+_questionCounter++;
+    
   }
 
   setUpQuestion(1);
 
   function resetAll(){
+    $("#btnNext").hide();
     _counter = 0; 
     $("#answer-box").empty();
     $("#question").empty();
     $(".option").css("background-color","transparent");
     _answerSelected = false;
+
   }
 
   $(".option").on("click", function(){
@@ -76,7 +79,8 @@ $(document).ready(function(){
     }else {   
        $(id).css("background-color","red");
     }
-    _questionCounter++;
+   
+
   });
 
   function showCorrecteAnswer(){
@@ -95,7 +99,7 @@ $(document).ready(function(){
 
    function addTimerToPage(){
 
-     if(_counter < 30){
+     if(_counter < 10){
        var $p = $("<p></p>");
        $p.text(_counter);
        _counter++;
@@ -104,10 +108,16 @@ $(document).ready(function(){
 
      }else {
        showCorrecteAnswer();
+        $("#btnNext").show();
      }
    
    }
     
     var timer = setInterval(addTimerToPage, 1000);
+
+    $("#btnNext").on("click", function(){
+      resetAll();
+      setUpQuestion(_questionCounter);
+    });
 
 });
