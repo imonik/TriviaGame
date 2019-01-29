@@ -1,7 +1,118 @@
 html, body {
-    heigth:100%
+    color: white;
+
 }
 
 body{
+  background-image: url("../images/curls.png");
+  background-color: #cccccc;
   
 }
+
+header {
+ border-bottom: 5px solid #f652a0;
+ height: 100px;
+ text-align: center;
+ font-size: 30px;
+ font-family: calibri;
+ font-weigth: bold;
+ background-color:  #151515;//#4c5270;
+ margin-bottom 15px;
+
+}
+
+.main-background {
+  margin-top: 15px;
+  background-color: #151515;
+  padding-top: 15px;
+}
+
+#timer {
+  border: 1px solid white;
+  height: 120px;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #2eb5e0;
+  width: 120px;
+  margin:auto;
+  margin-top: 15px;
+  padding-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px  #2eb5e0;
+ }
+
+
+#question {
+  border: cyan 3px solid;
+  text-align: center;
+  height: 80px;
+  font-family: 'Roboto Mono', monospace;
+  width: 600px;
+  margin: auto;
+  padding-top: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+}
+
+.container{
+  width:90%;
+  padding: 5px;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  margin-bottom: 15px;
+
+}
+
+.align-left{
+  margin-top: 10px;
+  margin-left: 100px;
+  width:40%;
+  float: left;
+  display: inline-block;
+  border: 2px solid cyan;
+  padding: 5px;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.align-right{
+  margin-top: 10px;
+  margin-left: 50px;
+  width:40%;
+  display: inline-block;
+  border: cyan 3px solid;
+  padding: 5px;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 5px;
+  text-align: center;
+}
+
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   border-top: 5px solid #f652a0;
+   background-color: #151515;
+   color: white;
+   text-align: center;
+   height: 55px;
+   padding-top: 15px;
+}
+
+.button {
+  margin-top: 22px;
+  margin-bottom: 15px; 
+  width: 200px;
+  margin: auto;
+}
+
+.button button {
+  margin-top: 10px;
+  width: 200px;
+  margin: auto;
+}
+

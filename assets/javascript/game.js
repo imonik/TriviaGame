@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var _questionPool = [
-    { id: 1, picture: "http://placehold.it/32x32", category: 5, question: "1Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "C" },
+    { id: 1, picture: "http://placehold.it/32x32", category: 5, question: "If cats are feline, and dogs, canine, then what are bears?.", options: { 1: "cervine ", 2: "ranine ", 3: " Ursine", 4: "leporine" }, answer: " Ursine" },
     { id: 2, picture: "http://placehold.it/32x32", category: 5, question: "2Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "A" },
     { id: 3, picture: "http://placehold.it/32x32", category: 5, question: "3Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "D" },
     { id: 4, picture: "http://placehold.it/32x32", category: 5, question: "4Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "C" },
@@ -37,16 +37,18 @@ $(document).ready(function () {
     var answerOptions = currentQuestion.options;
 
     for (var i = 0; i < _answwerPosition.length; i++) {
+    
       var $div = $("<div></div>");
       $div.attr("id", _answwerPosition[i]);
+        i == 0 || i == 2 ? $div.addClass("align-left") : $div.addClass("align-right");
 
       $div.text(answerOptions[_answwerPosition[i]]);     //
       for (key in answerOptions) {
 
         if (currentQuestion.answer == answerOptions[_answwerPosition[i]]) {
-          $div.attr("class", "option correct-answer");
+          $div.addClass("option correct-answer");
         } else {
-          $div.attr("class", "option wrong-answer");
+          $div.addClass("option wrong-answer");
         }
       }
       $("#answer-box").append($div);
@@ -72,15 +74,15 @@ $(document).ready(function () {
     _answerSelected = true;
     var id = "#" + this.id;
     if ($(id).hasClass("correct-answer")) {
-      $(id).css("background-color", "green");
+      $(id).css("background-color", "#50BFE6");
     } else {
-      $(id).css("background-color", "red");
+      $(id).css("background-color", "#FD0E35");
     }
   });
 
   function showCorrecteAnswer() {
     if (_answerSelected == false) {
-      $(".correct-answer").css("background-color", "green");
+      $(".correct-answer").css("background-color", "#50BFE6");
     }
   }
 
@@ -98,7 +100,6 @@ $(document).ready(function () {
       $p.text(_counter);
       _counter++;
       $("#timer").text(_counter);
-
     } else {
       showCorrecteAnswer();
       $("#btnNext").show();
