@@ -1,50 +1,52 @@
 html, body {
-    color: white;
+   /* // color: white; */
 
 }
 
 body{
-  background-image: url("../images/curls.png");
-  background-color: #cccccc;
-  
+  /* background-image: url("../images/curls.png"); */
+  /* background-color: #cccccc; */
+  background-color: #bcece0;
 }
 
 header {
- border-bottom: 5px solid #f652a0;
+ /* border-bottom: 5px solid #4c5270; */
  height: 100px;
  text-align: center;
  font-size: 30px;
  font-family: calibri;
- font-weigth: bold;
- background-color:  #151515;//#4c5270;
- margin-bottom 15px;
+ font-weight: bold;
+ /* background-color:  #36eee0; */
+ margin-bottom: 15px;
 
 }
 
 .main-background {
   margin-top: 15px;
-  background-color: #151515;
+  background-color: whitesmoke;
   padding-top: 15px;
+  border-radius: 15px;
 }
 
 #timer {
-  border: 1px solid white;
+  border: 3px solid #00a8a8;
   height: 120px;
   text-align: center;
   font-size: 50px;
   font-family: 'Roboto Mono', monospace;
-  background-color: #2eb5e0;
+  /* background-color: #f652a0; */
   width: 120px;
   margin:auto;
   margin-top: 15px;
   padding-top: 50px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px  #2eb5e0;
+  box-shadow: 0px 0px 10px  #c4dbe0;
  }
 
 
 #question {
-  border: cyan 3px solid;
+  border: #f652a0 3px solid;
+  background-color: whitesmoke;
   text-align: center;
   height: 80px;
   font-family: 'Roboto Mono', monospace;
@@ -70,12 +72,12 @@ header {
   margin-left: 100px;
   width:40%;
   float: left;
-  display: inline-block;
-  border: 2px solid cyan;
+  border: 2px solid #c4dbe0;
   padding: 5px;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
   border-radius: 5px;
+  background-color: whitesmoke;
 }
 
 .align-right{
@@ -83,11 +85,12 @@ header {
   margin-left: 50px;
   width:40%;
   display: inline-block;
-  border: cyan 3px solid;
+  border: #c4dbe0 3px solid;
   padding: 5px;
   font-family: 'Roboto Mono', monospace;
   border-radius: 5px;
   text-align: center;
+  background-color: whitesmoke;
 }
 
 footer {
@@ -95,14 +98,22 @@ footer {
    left: 0;
    bottom: 0;
    width: 100%;
-   border-top: 5px solid #f652a0;
-   background-color: #151515;
-   color: white;
+   border-top: 5px solid #0c6980;
+   background-color: #2eb5e0 ;
    text-align: center;
    height: 55px;
    padding-top: 15px;
+   color: white;
 }
 
+
+footer a {
+  text-align: center;
+  color: white;
+  color:#0c6980; 
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
 .button {
   margin-top: 22px;
   margin-bottom: 15px; 
@@ -114,5 +125,13 @@ footer {
   margin-top: 10px;
   width: 200px;
   margin: auto;
+  background-color: orange;
+  border: orange;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 17px;
 }
 

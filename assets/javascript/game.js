@@ -1,20 +1,20 @@
 $(document).ready(function () {
   var _questionPool = [
-    { id: 1, picture: "http://placehold.it/32x32", category: 5, question: "If cats are feline, and dogs, canine, then what are bears?.", options: { 1: "cervine ", 2: "ranine ", 3: " Ursine", 4: "leporine" }, answer: " Ursine" },
-    { id: 2, picture: "http://placehold.it/32x32", category: 5, question: "2Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "A" },
-    { id: 3, picture: "http://placehold.it/32x32", category: 5, question: "3Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "D" },
-    { id: 4, picture: "http://placehold.it/32x32", category: 5, question: "4Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "C" },
-    { id: 5, picture: "http://placehold.it/32x32", category: 5, question: "5Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "B" },
-    { id: 6, picture: "http://placehold.it/32x32", category: 5, question: "6Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "B" },
-    { id: 7, picture: "http://placehold.it/32x32", category: 5, question: "7Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "A" },
-    { id: 8, picture: "http://placehold.it/32x32", category: 5, question: "8Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "C" },
-    { id: 9, picture: "http://placehold.it/32x32", category: 5, question: "9Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "D" },
-    { id: 10, picture: "http://placehold.it/32x32", category: 5, question: "10Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "B" },
-    { id: 11, picture: "http://placehold.it/32x32", category: 5, question: "11Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "C" },
-    { id: 12, picture: "http://placehold.it/32x32", category: 5, question: "12Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "D" },
-    { id: 13, picture: "http://placehold.it/32x32", category: 5, question: "13Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "A" },
-    { id: 14, picture: "http://placehold.it/32x32", category: 5, question: "14Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "A" },
-    { id: 15, picture: "http://placehold.it/32x32", category: 5, question: "15Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "C" }
+    { id: 1, picture: "http://placehold.it/32x32", question: "If cats are feline, and dogs, canine, then what are bears?.", options: { 1: "cervine ", 2: "ranine ", 3: " Ursine", 4: "leporine" }, answer: " Ursine" },
+    { id: 2, picture: "http://placehold.it/32x32", question: "What is the average temperature of the human body, in degrees centigrade? ", options: { 1: "42", 2: "37", 3: "64", 4: "28" }, answer: "37" },
+    { id: 3, picture: "http://placehold.it/32x32", question: "Name the craft of knotting threads to create decorative yet useful objects.", options: { 1: "Macrame", 2: "kniting", 3: "Quilting", 4: "Sewing" }, answer: "Macrame" },
+    { id: 4, picture: "http://placehold.it/32x32", question: "Name the seventh planet from the sun", options: { 1: "Mars", 2: "Jupier", 3: "Uranus", 4: "Saturn" }, answer: "Uranus" },
+    { id: 5, picture: "http://placehold.it/32x32", question: "Which country is Prague in?", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Czech Republic" },
+    { id: 6, picture: "http://placehold.it/32x32", question: "Who played Neo in The Matrix?", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Keanu Reeves" },
+    { id: 7, picture: "http://placehold.it/32x32", question: "Which kind of bulbs were once exchanged as a form of currency? ", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Tulips" },
+    { id: 8, picture: "http://placehold.it/32x32", question: "Name the game played on a lawn called a 'crown green'", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Bowls" },
+    { id: 9, picture: "http://placehold.it/32x32", question: "Who was Henry VIll's first wife?", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Catherine of Aragon" },
+    { id: 10, picture: "http://placehold.it/32x32", question: "What flavour is Cointreau?", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Orange" },
+    { id: 11, picture: "http://placehold.it/32x32", question: "What kind of weapon is a falchion?", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "A sword" },
+    { id: 12, picture: "http://placehold.it/32x32", question: "Name the world's largest ocean.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Pacific" },
+    { id: 13, picture: "http://placehold.it/32x32", question: "13Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "A" },
+    { id: 14, picture: "http://placehold.it/32x32", question: "The Grand Canyon is located in which U.S. state?", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Arizona" },
+    { id: 15, picture: "http://placehold.it/32x32", question: "What song from the Disney film “Coco” won the 2018 Academy Award for Best Original Song? ", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Remember me" }
   ]
 
   var _randomIndex;
