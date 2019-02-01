@@ -11,13 +11,18 @@ body{
 
 header {
  /* border-bottom: 5px solid #4c5270; */
- height: 100px;
+ /* background-image: url("../images/logo.png");  */
+ height: 250px;
+ width: 100%;
  text-align: center;
  font-size: 30px;
  font-family: calibri;
  font-weight: bold;
- /* background-color:  #36eee0; */
+ background-color:  white;
+ margin: auto;
  margin-bottom: 15px;
+ border-bottom: 5px solid #0c6980;
+
 
 }
 
@@ -30,7 +35,7 @@ header {
 
 #timer {
   border: 3px solid #00a8a8;
-  height: 120px;
+  height: 80px;
   text-align: center;
   font-size: 50px;
   font-family: 'Roboto Mono', monospace;
@@ -38,7 +43,7 @@ header {
   width: 120px;
   margin:auto;
   margin-top: 15px;
-  padding-top: 50px;
+  padding-top: 30px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px  #c4dbe0;
  }
@@ -52,9 +57,9 @@ header {
   font-family: 'Roboto Mono', monospace;
   width: 600px;
   margin: auto;
-  padding-top: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 25px;
 }
 
@@ -101,7 +106,7 @@ footer {
    border-top: 5px solid #0c6980;
    background-color: #2eb5e0 ;
    text-align: center;
-   height: 55px;
+   height: 45px;
    padding-top: 15px;
    color: white;
 }
