@@ -33,6 +33,22 @@ header {
   border-radius: 15px;
 }
 
+.correct-answer:hover{
+   background-color:#50BFE6;
+}
+
+.wrong-answer:hover{
+   background-color:#50BFE6;
+}
+
+#message {
+  width: 90%;
+  margin: auto;
+  color: green;
+  font-weight: 25px;
+
+}
+
 #timer {
   border: 3px solid #00a8a8;
   height: 80px;

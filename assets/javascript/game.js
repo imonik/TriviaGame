@@ -26,9 +26,7 @@ $(document).ready(function () {
 
   function setUpQuestion(number) {
     resetAll();
-    //if (number ) {
-      
-    //}
+
 
     shuffle(_answwerPosition);
 
@@ -61,13 +59,14 @@ $(document).ready(function () {
 
   setUpQuestion(1);
 
+//   $("#answer-box").find("div").hover(function(){
+//     $(this).css("background-color", "#50BFE6");
+//   },function(){
+//     $(this).css("background-color", "");
+//   });
+
   function resetAll() {
-    $(".option").mouseover(function() {
-      $(this).css("background-color", "#50BFE6");
-    }).mouseout(function() {
-      $(this).css("background-color", "");
-    });
-    
+    $("#message").text("");
     $("#btnNext").hide();
     _counter = 30;
     $("#answer-box").empty();
@@ -78,14 +77,16 @@ $(document).ready(function () {
   }
 
   function clickedOption(){
-     $(".option" ).off( "mouseover mouseout");
+    // $(".option" ).off( "mouseover mouseout");
     _answerSelected = true;
     var id = "#" + this.id;
     if ($(id).hasClass("correct-answer")) {
-      $(id).css("background-color", "#50BFE6");
+      $("#message").text("Correct!");
+      $(id).css("background-color", "#98ff98");
     } else {
       $(id).css("background-color", "#FD0E35");
     }
+    $(".option").off("click");
      $("#btnNext").show();
   }
 
@@ -119,7 +120,4 @@ $(document).ready(function () {
     clearInterval(timer);
     setUpQuestion(_questionCounter);
   });
-
-
- 
 });
