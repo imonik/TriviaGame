@@ -120,14 +120,15 @@ footer a {
   font-weight: bold;
 }
 .button {
-  margin-top: 22px;
-  margin-bottom: 15px; 
+  margin-top: 15px;
   width: 200px;
   margin: auto;
+  height: 100px;
+  padding-top: 25px;
 }
 
 .button button {
-  margin-top: 10px;
+  margin-top: 50px;
   width: 200px;
   margin: auto;
   background-color: orange;

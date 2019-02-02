@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var _questionPool = [
-    { id: 1, picture: "http://placehold.it/32x32", question: "If cats are feline, and dogs, canine, then what are bears?.", options: { 1: "cervine ", 2: "ranine ", 3: " Ursine", 4: "leporine" }, answer: " Ursine" },
+    { id: 1, picture: "http://placehold.it/32x32", question: "If cats are feline, and dogs, canine, then what are bears?.", options: { 1: "Cervine ", 2: "Ranine ", 3: " Ursine", 4: "Leporine" }, answer: " Ursine" },
     { id: 2, picture: "http://placehold.it/32x32", question: "What is the average temperature of the human body, in degrees centigrade? ", options: { 1: "42", 2: "37", 3: "64", 4: "28" }, answer: "37" },
     { id: 3, picture: "http://placehold.it/32x32", question: "Name the craft of knotting threads to create decorative yet useful objects.", options: { 1: "Macrame", 2: "kniting", 3: "Quilting", 4: "Sewing" }, answer: "Macrame" },
     { id: 4, picture: "http://placehold.it/32x32", question: "Name the seventh planet from the sun", options: { 1: "Mars", 2: "Jupier", 3: "Uranus", 4: "Saturn" }, answer: "Uranus" },
@@ -14,12 +14,12 @@ $(document).ready(function () {
     { id: 12, picture: "http://placehold.it/32x32", question: "Name the world's largest ocean.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Pacific" },
     { id: 13, picture: "http://placehold.it/32x32", question: "13Labore aute esse sunt duis sunt ex ex.", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "A" },
     { id: 14, picture: "http://placehold.it/32x32", question: "The Grand Canyon is located in which U.S. state?", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Arizona" },
-    { id: 15, picture: "http://placehold.it/32x32", question: "What song from the Disney film “Coco” won the 2018 Academy Award for Best Original Song? ", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Remember me" }
+    { id: 15, picture: "http://placehold.it/32x32", question: "What song from the Disney film â€œCocoâ€ won the 2018 Academy Award for Best Original Song? ", options: { 1: "A", 2: "B", 3: "C", 4: "D" }, answer: "Remember me" }
   ]
 
   var _randomIndex;
   var _answwerPosition = [1, 2, 3, 4];
-  var _counter = 0;
+  var _counter = 30;
   var _questionCounter = 1;
   var _answerSelected = false;
 
@@ -30,6 +30,7 @@ $(document).ready(function () {
     }
 
     shuffle(_answwerPosition);
+
     var currentQuestion = _questionPool.filter(item => item.id == number)[0];
 
     $("#question").text(currentQuestion.question);
@@ -51,6 +52,8 @@ $(document).ready(function () {
           $div.addClass("option wrong-answer");
         }
       }
+
+      $div.on("click", clickedOption);
       $("#answer-box").append($div);
     }
     
@@ -61,16 +64,31 @@ $(document).ready(function () {
   setUpQuestion(1);
 
   function resetAll() {
+     $(".option" ).on( "mouseenter mouseleave" );
     $("#btnNext").hide();
-    _counter = 0;
+    _counter = 30;
     $("#answer-box").empty();
     $("#question").empty();
-    $(".option").css("background-color", "transparent");
+    $(".option").css("background-color", "");
     _answerSelected = false;
 
   }
 
-  $(".option").on("click", function () {
+//   $(".option").on("click", function () {
+//     _answerSelected = true;
+//     var id = "#" + this.id;
+//     if ($(id).hasClass("correct-answer")) {
+//       $(id).css("background-color", "#50BFE6");
+//     } else {
+//       $(id).css("background-color", "#FD0E35");
+     
+//     }
+
+//      $("#btnNext").show();
+//   });
+
+  function clickedOption(){
+     $(".option" ).off( "mouseenter mouseleave" );
     _answerSelected = true;
     var id = "#" + this.id;
     if ($(id).hasClass("correct-answer")) {
@@ -78,7 +96,8 @@ $(document).ready(function () {
     } else {
       $(id).css("background-color", "#FD0E35");
     }
-  });
+     $("#btnNext").show();
+  }
 
   function showCorrecteAnswer() {
     if (_answerSelected == false) {
@@ -95,10 +114,10 @@ $(document).ready(function () {
   }
 
   function addTimerToPage() {
-    if (_counter < 10) {
+    if (_counter > 0) {
       var $p = $("<p></p>");
       $p.text(_counter);
-      _counter++;
+      _counter--;
       $("#timer").text(_counter);
     } else {
       showCorrecteAnswer();
@@ -112,4 +131,14 @@ $(document).ready(function () {
     resetAll();
     setUpQuestion(_questionCounter);
   });
+
+
+  $(".option").mouseover(function() {
+    $( this ).css("background-color", "#50BFE6");
+  }).mouseout(function() {
+    $( this ).css("background-color", "");
+  });
+
+//   $(".option" ).off( "mouseenter mouseleave" );
+
 });
